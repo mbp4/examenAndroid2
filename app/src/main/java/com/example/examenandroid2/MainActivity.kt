@@ -73,7 +73,8 @@ class MainActivity : ComponentActivity() {
         var total = 0
 
         for (producto in productosLista) {
-            productosLista.add(producto)
+            val itemString = "${producto.nombre} (${producto.cantidad}) = ${producto.precio}€"
+            adapter.add(itemString)
             adapter.notifyDataSetChanged()
             total += producto.precio * producto.cantidad
         }
