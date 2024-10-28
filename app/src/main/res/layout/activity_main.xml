@@ -2,15 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/azul"
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lista de la compra"
-        android:textColor="@color/black"
         android:gravity="center"
         android:textSize="24dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
         android:padding="16dp"
         />
 
@@ -18,36 +21,44 @@
         android:id="@+id/textoDatos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Texto"
         android:textSize="20dp"
-        android:textColor="@color/black" />
+        android:background="@color/verde"
+        android:textColor="@color/black"
+        />
 
     <ListView
         android:layout_width="wrap_content"
         android:id="@+id/lista"
-        android:layout_height="391dp" />
+        android:layout_height="391dp"
+        android:divider="@color/white"
+        android:dividerHeight="2dp"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/txtProducto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:hint="Producto" />
 
         <EditText
             android:id="@+id/txtCantidad"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/white"
             android:hint="Cantidad" />
 
         <EditText
             android:id="@+id/txtPrecio"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/white"
             android:hint="Precio" />
 
     </LinearLayout>
@@ -56,6 +67,8 @@
         android:id="@+id/btnAñadir"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:textColor="@color/black"
         android:text="Añadir" />
 
 
