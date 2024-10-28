@@ -8,17 +8,6 @@ import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.examenandroid2.ui.theme.ExamenAndroid2Theme
 
 class MainActivity : ComponentActivity() {
     private lateinit var textoDatos: TextView
@@ -29,6 +18,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var btnAñadir: Button
     private lateinit var adapter: ArrayAdapter<String>
     private lateinit var productosLista: MutableList<Producto>
+    private lateinit var productoConPrecio: MutableList<Producto>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +31,7 @@ class MainActivity : ComponentActivity() {
         txtPrecio = findViewById(R.id.txtPrecio)
         btnAñadir = findViewById(R.id.btnAñadir)
         productosLista = mutableListOf()
+        productoConPrecio = mutableListOf()
 
         textoDatos.text = "Lista de la compra vacia"
 
@@ -65,6 +56,14 @@ class MainActivity : ComponentActivity() {
         var productoNuevo = Producto(producto, cantidad, precio)
         productosLista.add(productoNuevo)
 
+        if (productoNuevo.precio != 0){
+            productoConPrecio.add(productoNuevo)
+        }
+
+        txtProducto.text.clear()
+        txtCantidad.text.clear()
+        txtPrecio.text.clear()
+
         actualizarLista()
     }
 
@@ -79,6 +78,6 @@ class MainActivity : ComponentActivity() {
             total += producto.precio * producto.cantidad
         }
 
-        textoDatos.text = "Lista de la compra: ${productosLista.size} = $total €"
+        textoDatos.text = "Lista de la compra: ${productoConPrecio.size} = $total €"
     }
 }
