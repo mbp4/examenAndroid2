@@ -1,6 +1,6 @@
 # examenAndroid2
  
-link al repositorio: 
+link al repositorio: https://github.com/mbp4/examenAndroid2.git
 
 ## Descripción 
 
@@ -11,6 +11,8 @@ Para esto se ha hecho uso de una data class de Producto con todos sus atributos 
 ### Main Activity
 
 Esta activity contiene toda la lógica del programa:
+
+```
 
 Clase MainActivity
     Variables
@@ -62,6 +64,7 @@ Clase MainActivity
             total = total + (producto.precio * producto.cantidad)
 
         Establecer texto de textoDatos como "Lista de la compra: ${productoConPrecio.size} = $total €"
+```
 
 
 Esta clase está formada por varios TextEdits con un botón para añadir productos y un ListView para que estos se muestren por pantalla. 
