@@ -43,23 +43,23 @@
         <EditText
             android:id="@+id/txtProducto"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:hint="Producto" />
+            android:layout_height="62dp"
+            android:hint="Producto"
+            android:textColor="@color/white" />
 
         <EditText
             android:id="@+id/txtCantidad"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="@color/white"
-            android:hint="Cantidad" />
+            android:layout_height="66dp"
+            android:hint="Cantidad"
+            android:textColor="@color/white" />
 
         <EditText
             android:id="@+id/txtPrecio"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="@color/white"
-            android:hint="Precio" />
+            android:layout_height="71dp"
+            android:hint="Precio"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
